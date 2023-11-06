@@ -1,0 +1,43 @@
+@import "../utilities";
+
+.carousel_wrapper {
+    height: 40vh;
+    background-color: darken($color: #fff, $amount: 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    width: 100vw;
+    min-height: 30vh;
+
+    .carousel {
+        background-color: tan;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .testimonial-div {
+            background-color: red;
+            height: 100% !important;
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                margin: 0 auto;
+                font-family: "Times New Roman", Times, serif;
+
+                @include mobile_screen {
+                    width: 80%;
+                }
+                .by {
+                    margin-top: 1rem;
+                    // color: $primary-blue;
+                }
+            }
+        }
+    }
+}
