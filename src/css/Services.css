@@ -1,0 +1,97 @@
+.services_wrapper {
+  width: 100vw !important;
+  padding: 2rem 0 4rem !important;
+}
+.services_wrapper .header {
+  padding: 1rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services_wrapper .header .text_wrapper {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
+@media (max-width: 770px) {
+  .services_wrapper .header .text_wrapper {
+    width: 80%;
+  }
+}
+.services_wrapper .header .text_wrapper h4 {
+  font: 95rem;
+  font-weight: bold;
+}
+.services_wrapper .arrow_vector {
+  position: sticky;
+  top: 70%;
+  transform: rotate(180deg);
+  left: 20px;
+  width: 3%;
+}
+.services_wrapper .card_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+  width: 80%;
+  margin: 0 auto !important;
+  position: relative;
+}
+@media (max-width: 770px) {
+  .services_wrapper .card_content {
+    flex-direction: column;
+    row-gap: 1rem !important;
+  }
+}
+.services_wrapper .card_content .card {
+  border: none;
+  border-radius: 0;
+  height: 150px;
+  padding: 1rem !important;
+}
+@media (max-width: 770px) {
+  .services_wrapper .card_content .card {
+    width: 80%;
+    box-shadow: 0 9px 9px 0 rgba(2, 2, 2, 0.062);
+    border-radius: 0.3rem;
+    height: 170px;
+  }
+}
+.services_wrapper .card_content .card .logo {
+  width: 40px;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.services_wrapper .card_content .card h6 {
+  margin-top: 0.9rem !important;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.services_wrapper .card_content .card p {
+  font-size: 0.9rem;
+  margin-top: 1rem !important;
+}
+@media (max-width: 770px) {
+  .services_wrapper .card_content .card p {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 770px) {
+  .services_wrapper .card_content .card_1 {
+    position: sticky;
+    top: 140px !important;
+  }
+}
+@media (max-width: 770px) {
+  .services_wrapper .card_content .card_2 {
+    position: sticky;
+    top: 170px !important;
+  }
+}
+@media (max-width: 770px) {
+  .services_wrapper .card_content .card_3 {
+    position: sticky;
+    top: 190px !important;
+  }
+}

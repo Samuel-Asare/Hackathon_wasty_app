@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import "../../../css/HeroSection.css";
 
 const HeroSection = () => {
     return (
         <div className="container_wrapper">
+           
             <div className="inner_wrapper">
                 <div className="text_btn">
                     <div className="text">
@@ -17,6 +19,9 @@ const HeroSection = () => {
 
                     <div className="btn">
                         <button className="request_btn">Request Now</button>
+                        <Link to="/signup">
+                        <button className="create_account">Create account</button>
+                        </Link>
                     </div>
                 </div>
             </div>

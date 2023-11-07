@@ -1,9 +1,13 @@
-.header_wrapper .navbar .container_holder {
+.header_wrapper .navbar {
+  position: fixed;
+  width: 100vw;
   z-index: 99;
-  background-color: white !important;
-  padding: 1rem 2rem !important;
-  display: flex !important;
-  align-items: center !important;
+}
+.header_wrapper .navbar .container_holder {
+  background-color: #8de896;
+  padding: 0.5rem 3rem !important;
+  display: flex;
+  align-items: center;
 }
 .header_wrapper .navbar .container_holder .navbar-brand {
   font-weight: bold;
@@ -15,9 +19,18 @@
   color: #14621c;
   font-size: 2rem;
 }
+.header_wrapper .navbar .container_holder .collapse {
+  position: relative;
+}
 @media (min-width: 992px) {
   .header_wrapper .navbar .container_holder .collapse {
     margin-left: 5rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .header_wrapper .navbar .container_holder .collapse .navbar-nav {
+    position: absolute;
+    right: 0;
   }
 }
 .header_wrapper .navbar .container_holder .collapse .navbar-nav .nav-link {
@@ -48,4 +61,4 @@
   .header_wrapper .navbar .container_holder .collapse .navbar-nav .nav-link:hover::after {
     width: 40%;
   }
-}/*# sourceMappingURL=HeaderNav.css.map */
+}

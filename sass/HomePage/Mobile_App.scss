@@ -1,0 +1,33 @@
+@import "../utilities";
+
+.mobile_app_wrapper{
+    width: 100vw;
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5rem 0 !important;
+
+    .image{
+        img{
+width: 100%;
+        }
+    }
+
+    .bottom_text{
+        margin-top: 1rem !important;
+        .text_wrapper{
+            h6{
+font-weight: bold;
+            }
+            p{
+                margin-top: .5rem !important;
+                font-size: .9rem;
+                .store{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

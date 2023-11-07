@@ -58,10 +58,11 @@ const Carousel_Testimonies = (args) => {
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.src}
+                className="carousel_item"
             >
                 <div className="testimonial-div">
                     <figcaption className="text">
-                        {`"${item.word}"`}
+                        <p className="quote">{`"${item.word}"`}</p>
                         <cite className="by">~{item.by}</cite>
                     </figcaption>
                 </div>
@@ -71,7 +72,12 @@ const Carousel_Testimonies = (args) => {
 
     return (
         <div className="carousel_wrapper">
-            <Carousel
+             <div className="header">
+                <h2>What Customers Are Saying<span>?</span></h2>
+            </div>
+            <div className="content">
+            <div className="carousel_div">
+<Carousel
                 activeIndex={activeIndex}
                 next={next}
                 previous={previous}
@@ -89,13 +95,17 @@ const Carousel_Testimonies = (args) => {
                     direction="prev"
                     directionText="Previous"
                     onClickHandler={previous}
+                    className="carousel_controls"
                 />
                 <CarouselControl
                     direction="next"
                     directionText="Next"
                     onClickHandler={next}
+                    className="carousel_controls"
                 />
             </Carousel>
+            </div>
+            </div>
         </div>
     );
 };

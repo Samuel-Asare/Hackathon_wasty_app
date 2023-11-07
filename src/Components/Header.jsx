@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/HeaderNav.css";
 
 const HeaderNav = () => {
@@ -5,9 +6,9 @@ const HeaderNav = () => {
         <div className="header_wrapper">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid container_holder">
-                    <a className="navbar-brand" href="#">
+                    <Link className="navbar-brand" to="/">
                         Wasty<span>.</span>
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
