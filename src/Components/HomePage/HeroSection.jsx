@@ -16,7 +16,9 @@ const HeroSection = () => {
           </div>
 
           <div className="btn">
-            <button className="request_btn">Request Now</button>
+            <Link to="/request">
+              <button className="request_btn">Request Now</button>
+            </Link>
             <Link to="/signup">
               <button className="create_account">Create account</button>
             </Link>
