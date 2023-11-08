@@ -1,0 +1,43 @@
+@import "../utilities";
+
+.submitted_wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem !important;
+  height: 100vh;
+  .inner_wrapper {
+    width: 30%;
+    .header {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0 !important;
+      h4 {
+        font-weight: bold;
+        font-size: 1.8rem;
+        &::after {
+          content: "";
+          display: block;
+          height: 1px;
+          width: 100%;
+          background-color: #000;
+          margin-top: 1rem !important;
+        }
+      }
+    }
+
+    .details {
+      padding: 0 1rem !important;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      .data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h6 {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

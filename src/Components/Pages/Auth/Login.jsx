@@ -1,8 +1,43 @@
 import "../../../css/Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SignupIllustrator from "../../../assets/Auth_Images/signupLogin_Image.svg";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../Context/AuthContext/AuthContext";
+import axios from "axios"
 
 const Login = () => {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const { dispatch, isFetching } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      dispatch({ type: "LOGIN_START" });
+      const res = await axios.post(
+        " https://hackathon-waste-api.onrender.com/api/v1/auth/login",
+        {
+          email,
+          password,
+          appType:"app1"
+        }
+      );
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      res.data && navigate("/");
+    } catch (error) {
+      dispatch({ type: "LOGIN_FAILURE" });
+      if (
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        setError(error.response.data.message);
+      }
+    }
+  }
   return (
     <div className="login_wrapper">
       <div className="inputs_feild_container">
@@ -15,7 +50,7 @@ const Login = () => {
           {/* or.... */}
           <p className="divider_or">Or</p>
           {/* form field */}
-          <form>
+          <form onSubmit={handleLogin}>
             <fieldset className="form_fieldset">
               <div className="input">
                 <label htmlFor="full_name">Email:</label>
@@ -24,6 +59,7 @@ const Login = () => {
                   name="email"
                   id="email"
                   placeholder="Your Email"
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
 
@@ -34,6 +70,8 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="Your Password"
+                  onChange={(e)=>setPassword(e.target.value)}
+
                 />
               </div>
             </fieldset>
@@ -42,6 +80,7 @@ const Login = () => {
               Login
             </button>
           </form>
+          {error && <span style={{ color: "red" }}>{error}</span>}
           {/* alternative step */}
           <div className="alternative_step">
             <p>Did you forget your password?</p>

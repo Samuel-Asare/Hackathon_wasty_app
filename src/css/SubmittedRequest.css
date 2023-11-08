@@ -1,0 +1,40 @@
+.submitted_wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem !important;
+  height: 100vh;
+}
+.submitted_wrapper .inner_wrapper {
+  width: 30%;
+}
+.submitted_wrapper .inner_wrapper .header {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 !important;
+}
+.submitted_wrapper .inner_wrapper .header h4 {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.submitted_wrapper .inner_wrapper .header h4::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+  margin-top: 1rem !important;
+}
+.submitted_wrapper .inner_wrapper .details {
+  padding: 0 1rem !important;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.submitted_wrapper .inner_wrapper .details .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.submitted_wrapper .inner_wrapper .details .data h6 {
+  font-weight: bold;
+}

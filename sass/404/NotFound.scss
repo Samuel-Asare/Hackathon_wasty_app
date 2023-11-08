@@ -1,0 +1,26 @@
+@import "../utilities";
+
+.not_found_wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner_wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    h4 {
+      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 1rem !important;
+    }
+    p {
+      margin-top: 1rem !important;
+      font-weight: bold;
+    }
+  }
+}

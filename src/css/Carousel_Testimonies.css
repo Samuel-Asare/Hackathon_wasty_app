@@ -2,6 +2,7 @@
   height: 50vh;
   background-color: #14621c;
   color: #fff;
+  width: 100vw;
 }
 .carousel_wrapper .header {
   width: 100%;

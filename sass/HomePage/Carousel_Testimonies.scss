@@ -1,68 +1,65 @@
 @import "../utilities";
 
 .carousel_wrapper {
-    height: 50vh ;
-    background-color: darken($color: $primary-color,$amount: 50);
-    color: #fff;
-    .header{
-        width: 100%;
-        text-align: center;
-        padding:1rem !important;
-        margin-bottom: 1rem !important;
+  height: 50vh;
+  background-color: darken($color: $primary-color, $amount: 50);
+  color: #fff;
+  width: 100vw;
+  .header {
+    width: 100%;
+    text-align: center;
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
 
-        
-        
-        h2{
-            font-size: 1.5rem;
-        font-weight: bold;
-        
-        &::after{
-            content: "";
-            display: block;
-            height: 1px;
-            width: 50%;
-            margin: 0 auto;
-            background-color: #000;
-            margin-top: 1rem !important;
-        }
-        }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 50%;
+        margin: 0 auto;
+        background-color: #000;
+        margin-top: 1rem !important;
+      }
     }
+  }
 
-    .carousel {
-        overflow: hidden !important;
-       height: 35vh !important;
+  .carousel {
+    overflow: hidden !important;
+    height: 35vh !important;
 
-       .text {      
-        // width: 70%;
-        margin: 0 auto !important;
-        font-family: "Times New Roman", Times, serif;
-        text-align: center;
-        height: 35vh !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        // background-color: red;
+    .text {
+      // width: 70%;
+      margin: 0 auto !important;
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      height: 35vh !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // background-color: red;
+
+      @include mobile_screen {
+        width: 80%;
+      }
+
+      .quote {
+        width: 80%;
+        margin: 0 auto;
 
         @include mobile_screen {
-            width: 80%;
+          width: 95%;
+          font-size: 0.9rem;
         }
-
-        .quote{
-            width: 80%;
-            margin: 0 auto;
-
-            @include mobile_screen {
-                width: 95%;
-                font-size: .9rem;
-            }
-        }
-        .by {
-            margin-top: 1rem !important;
-            // color: $primary-blue;
-        }
+      }
+      .by {
+        margin-top: 1rem !important;
+        // color: $primary-blue;
+      }
     }
-
-       
-    }
+  }
 }

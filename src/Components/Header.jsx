@@ -22,7 +22,11 @@ const HeaderNav = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link className="nav-link active" aria-current="page">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/submittedrequests"
+              >
                 Your Requests
               </Link>
             </div>

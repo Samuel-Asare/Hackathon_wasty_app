@@ -115,6 +115,8 @@
   color: rgba(255, 255, 255, 0.7803921569);
   font-weight: bold;
   transition: ease-in-out 600ms color;
+  padding: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 .signup_wrapper .inputs_feild_container .inputs_content form .submit_btn:hover {
   color: #fff;
@@ -128,6 +130,7 @@
   width: 80%;
   text-align: center;
   margin-top: 1.5rem !important;
+  text-decoration: underline;
 }
 .signup_wrapper .inputs_feild_container .inputs_content .login_btn::before {
   content: "";
