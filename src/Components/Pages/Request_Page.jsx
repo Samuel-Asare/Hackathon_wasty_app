@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../css/Request_Page.css";
 import { useState } from "react";
-import axios from "axios"
+
 
 const RequestPage = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,9 @@ const RequestPage = () => {
       [name]: value,
     });
   };
-  console.log(formData)
+ 
+
+ 
 
 
   return (
@@ -32,7 +34,7 @@ const RequestPage = () => {
           <h4>Information</h4>
         </div>
 
-        <form className="input_field" onChange={handleInputChange}>
+        <form className="input_field">
           {/* name */}
           <div className="input">
             <label htmlFor="name">Full Name:</label>
@@ -43,6 +45,7 @@ const RequestPage = () => {
               placeholder="Enter Your Name"
               required
               value={formData.username}
+              onChange={handleInputChange}
             />
           </div>
           {/* location */}
@@ -135,7 +138,7 @@ const RequestPage = () => {
             </select>
           </div>
           <div className="btn_next">
-            <Link to="/review">
+          <Link to= "/review">
               <button className="next_btn">Next</button>
             </Link>
           </div>

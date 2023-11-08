@@ -1,7 +1,10 @@
+
+
 import { Link } from "react-router-dom";
 import "../../css/Review_Page.css";
 
 const MainReviewPage = () => {
+ 
   return (
     <div className="review_wrapper">
       <div className="inner_wrapper">
@@ -11,11 +14,11 @@ const MainReviewPage = () => {
         <div className="details">
           <div className="data">
             <h6>Name:</h6>
-            <p>Sam</p>
+            <p></p>
           </div>
           <div className="data">
             <h6>Location:</h6>
-            <p>Accra</p>
+            <p></p>
           </div>
           <div className="data">
             <h6>Landmark:</h6>

@@ -28,7 +28,6 @@ const SignUp = () => {
           username,
           email,
           password,
-          confirmPassword,
           appType:"app1"
         }
       );

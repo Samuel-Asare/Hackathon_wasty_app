@@ -28,14 +28,8 @@ getLatestRequest()
         <div className="header">
           <h4>Your recent request</h4>
         </div>
-      
-    
       <div className="details">
       
-      
-
-      
-      <>
           <div className="data">
             <h6>Name: </h6>
             <p>{data.username}</p>
@@ -64,8 +58,6 @@ getLatestRequest()
             <h6>Service Option:</h6>
             <p>{data.serviceOption}</p>
           </div>
-          </>
-          
         </div>
       </div>
     </div>
