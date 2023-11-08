@@ -4,8 +4,28 @@
   justify-content: center;
   height: 100vh;
   flex-direction: column;
+  padding-top: 3rem !important;
 }
-.request_wrapper .input {
+.request_wrapper .inner_wrapper {
+  width: 40%;
+}
+.request_wrapper .inner_wrapper .header {
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+.request_wrapper .inner_wrapper .header h4 {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.request_wrapper .inner_wrapper .header h4::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
+.request_wrapper .inner_wrapper .input_field .input {
   width: 80%;
   display: flex;
   margin: 0 auto !important;
@@ -13,12 +33,12 @@
   justify-content: center;
   flex-direction: column;
 }
-.request_wrapper .input label {
+.request_wrapper .inner_wrapper .input_field .input label {
   margin-top: 0.4rem !important;
   font-weight: bold;
   font-size: 0.85rem;
 }
-.request_wrapper .input input {
+.request_wrapper .inner_wrapper .input_field .input input {
   width: 100%;
   border: 1.5px solid rgba(0, 0, 0, 0.7019607843);
   outline: none;
@@ -26,9 +46,24 @@
   padding: 0.2rem 0.5rem !important;
   font-size: 0.9rem;
 }
-.request_wrapper .input input::-moz-placeholder {
+.request_wrapper .inner_wrapper .input_field .input input::placeholder {
   font-size: 0.85rem;
 }
-.request_wrapper .input input::placeholder {
-  font-size: 0.85rem;
-}/*# sourceMappingURL=Request_Page.css.map */
+.request_wrapper .inner_wrapper .input_field .btn_next {
+  width: 80%;
+  margin: 0 auto !important;
+  display: flex;
+  justify-content: flex-end;
+}
+.request_wrapper .inner_wrapper .input_field .btn_next a .next_btn {
+  outline: none;
+  background-color: #8de896;
+  padding: 0.2rem 1rem !important;
+  border: none;
+  width: 100%;
+  border-radius: 0.2rem;
+  transition: ease-in-out 600ms background-color;
+}
+.request_wrapper .inner_wrapper .input_field .btn_next a .next_btn:hover {
+  background-color: #1c8d27;
+}

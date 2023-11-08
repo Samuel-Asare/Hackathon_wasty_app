@@ -1,0 +1,47 @@
+.contact_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem !important;
+  width: 100vw;
+  background-color: #8de896;
+  border-bottom: 1px solid rgba(102, 102, 102, 0.2156862745);
+}
+.contact_wrapper .inner_wrapper {
+  width: 50%;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+.contact_wrapper .inner_wrapper .header {
+  padding: 2rem 0 !important;
+}
+.contact_wrapper .inner_wrapper .header h4 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  letter-spacing: 0.5px;
+}
+.contact_wrapper .inner_wrapper .input_field {
+  width: 100%;
+}
+.contact_wrapper .inner_wrapper .input_field .input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  width: 500px;
+  padding: 0.3rem 1rem !important;
+}
+.contact_wrapper .inner_wrapper .input_field .input input {
+  width: 100%;
+  padding: 0.2rem 0.5rem !important;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+}
+.contact_wrapper .inner_wrapper .input_field .input input::placeholder {
+  font-size: 0.85rem;
+}
+.contact_wrapper .inner_wrapper .input_field .input .plane_svg {
+  cursor: pointer;
+}

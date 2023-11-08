@@ -1,0 +1,30 @@
+.completedRequest_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.completedRequest_wrapper .inner_wrapper .header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  row-gap: 1rem;
+}
+.completedRequest_wrapper .inner_wrapper .header .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.completedRequest_wrapper .inner_wrapper .header .text h6 {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.completedRequest_wrapper .inner_wrapper main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem !important;
+}

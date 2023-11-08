@@ -1,113 +1,110 @@
 @import "../utilities";
 
-.services_wrapper{
-    width: 100vw !important;
-    padding: 2rem 0 4rem !important;
-    
-    .header{
-      
-        padding:  1rem  !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .text_wrapper{
-            text-align: center;
-            width: 40%;
-            margin: 0 auto ;
+img {
+  width: 55%;
+}
 
-            @include mobile_screen{
-                width: 80%;
-            }
+.services_wrapper {
+  width: 100vw !important;
+  padding: 2rem 0 4rem !important;
 
-            h4{
-                font: 95rem;
-                font-weight: bold;
-            }
-        }
-        
-    }
+  .header {
+    padding: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text_wrapper {
+      text-align: center;
+      width: 40%;
+      margin: 0 auto;
 
-    .arrow_vector{
-        position: sticky;
-        top: 70%;
-        transform: rotate(180deg);
-        left: 20px;
-        width: 3%;
-    }
-
-    .card_content{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        column-gap: 1rem;
+      @include mobile_screen {
         width: 80%;
-        margin: 0 auto !important;
-        position: relative;
+      }
 
-        @include mobile_screen{
-            flex-direction: column;
-            row-gap: 1rem !important;
-        
-        }
-     
-
-        .card{
-            border: none;
-            border-radius: 0;
-            height: 150px;
-            padding: 1rem !important;
-
-            @include mobile_screen{
-                width: 80%;
-                box-shadow: 0 9px 9px 0 rgba(2, 2, 2, 0.062);
-                border-radius: .3rem;
-                height: 170px;
-            }
-
-            .logo{
-            width: 40px;
-            text-align: center;
-            border-radius: .5rem;
-            }
-
-           
-            h6{
-                margin-top: .9rem !important;
-                font-size: .9rem;
-                font-weight: bold;
-                
-            }
-
-            p{
-                font-size: .9rem;
-                margin-top: 1rem !important;
-
-                @include mobile_screen{
-                    font-size: .85rem;
-                }
-            }
-        }
-
-        .card_1{
-            @include mobile_screen{
-                position: sticky;
-                top: 140px !important;
-            }
-        }
-
-        .card_2{
-            @include mobile_screen{
-                position: sticky;
-                top: 170px !important;
-            }
-        }
-        
-
-        .card_3{
-            @include mobile_screen{
-                position: sticky;
-                top: 190px !important;
-            }
-        }
+      h4 {
+        font: 95rem;
+        font-weight: bold;
+      }
     }
+  }
+
+  .arrow_vector {
+    position: sticky;
+    top: 70%;
+    transform: rotate(180deg);
+    left: 20px;
+    width: 3%;
+  }
+
+  .card_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    width: 80%;
+    margin: 0 auto !important;
+    position: relative;
+
+    @include mobile_screen {
+      flex-direction: column;
+      row-gap: 1rem !important;
+    }
+
+    .card {
+      border: none;
+      border-radius: 0;
+      height: 150px;
+      padding: 1rem !important;
+
+      @include mobile_screen {
+        width: 80%;
+        box-shadow: 0 9px 9px 0 rgba(2, 2, 2, 0.062);
+        border-radius: 0.3rem;
+        height: 170px;
+      }
+
+      .logo {
+        width: 40px;
+        text-align: center;
+        border-radius: 0.5rem;
+      }
+
+      h6 {
+        margin-top: 0.9rem !important;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-top: 1rem !important;
+
+        @include mobile_screen {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .card_1 {
+      @include mobile_screen {
+        position: sticky;
+        top: 140px !important;
+      }
+    }
+
+    .card_2 {
+      @include mobile_screen {
+        position: sticky;
+        top: 170px !important;
+      }
+    }
+
+    .card_3 {
+      @include mobile_screen {
+        position: sticky;
+        top: 190px !important;
+      }
+    }
+  }
 }

@@ -1,140 +1,31 @@
-import * as React from "react";
-import "../../css/Request_Page.css";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { useState } from "react";
-import UserInformation from "./UserInformation";
-import WasteInformation from "./WasteInformation";
-import ReviewRequest from "./ReviewRequest";
+import "../../css/CompleteedRequest.css";
+import celebration from "../../assets/Request_Images/Celebration.svg";
 
-// .........................
-
-const steps = ["User Details", "Waste details", "Review your Details"];
-
-function getStepContent(step) {
-    switch (step) {
-        case 0:
-            return <UserInformation />;
-        case 1:
-            return <WasteInformation />;
-        case 2:
-            return <ReviewRequest />;
-        default:
-            throw new Error("Unknown step");
-    }
-}
-
-export default function Checkout() {
-    const [activeStep, setActiveStep] = useState(0);
-
-    const handleNext = () => {
-        setActiveStep(activeStep + 1);
-    };
-
-    const handleBack = () => {
-        setActiveStep(activeStep - 1);
-    };
-
-    const handleSubmit = async () => {
-        setActiveStep(activeStep + 1);
-    };
-
-    return (
-        <div className="form_wrapper">
-            <div className="booking">
-                {/* ALERT */}
-                {alert === true && (
-                    <div className="alert alert-danger" role="alert">
-                        Required Field Is Empty
-                    </div>
-                )}
-                {/* END ALERT */}
-                <React.Fragment>
-                    <CssBaseline />
-                    <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-                        <Paper
-                            variant="outlined"
-                            sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
-                            className="connect_glassy_div"
-                        >
-                            <Typography
-                                component="h1"
-                                variant="h4"
-                                align="center"
-                            >
-                                Request For Service
-                            </Typography>
-                            <Stepper
-                                activeStep={activeStep}
-                                sx={{ pt: 3, pb: 5 }}
-                            >
-                                {steps.map((label) => (
-                                    <Step key={label}>
-                                        <StepLabel>{label}</StepLabel>
-                                    </Step>
-                                ))}
-                            </Stepper>
-                            {activeStep === steps.length ? (
-                                <React.Fragment>
-                                    <Typography variant="h5" gutterBottom>
-                                        Thank you for requesting our service 👍
-                                    </Typography>
-                                    <Typography variant="subtitle1">
-                                        Your waste collection request has been
-                                        successfully submitted. We have sent you
-                                        a confirmation email. Thank you for
-                                        using our service!
-                                    </Typography>
-                                </React.Fragment>
-                            ) : (
-                                <React.Fragment>
-                                    {getStepContent(activeStep)}
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            justifyContent: "flex-end",
-                                        }}
-                                    >
-                                        {activeStep !== 0 && (
-                                            <Button
-                                                onClick={handleBack}
-                                                sx={{ mt: 3, ml: 1 }}
-                                            >
-                                                Back
-                                            </Button>
-                                        )}
-
-                                        {activeStep === steps.length - 1 ? (
-                                            <Button
-                                                variant="contained"
-                                                sx={{ mt: 3, ml: 1 }}
-                                                onClick={handleSubmit}
-                                            >
-                                                Request Now
-                                            </Button>
-                                        ) : (
-                                            <Button
-                                                variant="contained"
-                                                onClick={handleNext}
-                                                sx={{ mt: 3, ml: 1 }}
-                                            >
-                                                Next
-                                            </Button>
-                                        )}
-                                    </Box>
-                                </React.Fragment>
-                            )}
-                        </Paper>
-                    </Container>
-                </React.Fragment>
-            </div>
+const CompletedRequest = () => {
+  return (
+    <div className="completedRequest_wrapper">
+      <div className="inner_wrapper">
+        <div className="header">
+          <svg
+            width="46"
+            height="46"
+            fill="#249b03"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12.136 2.25c-5.484-.073-9.96 4.403-9.886 9.887.073 5.259 4.355 9.54 9.614 9.614 5.484.075 9.96-4.402 9.885-9.885-.072-5.26-4.354-9.542-9.613-9.615Zm-.787 9.023 2.416-2.766a.75.75 0 0 1 1.13.988l-2.416 2.765a.749.749 0 1 1-1.13-.987ZM9.527 15.53a.75.75 0 0 1-1.06 0l-2.248-2.25a.75.75 0 0 1 1.062-1.06l2.25 2.25a.75.75 0 0 1-.004 1.06Zm8.288-6.037-5.245 6a.75.75 0 0 1-.54.257h-.024a.75.75 0 0 1-.531-.22l-2.247-2.25a.75.75 0 0 1 1.061-1.06l1.397 1.398a.375.375 0 0 0 .547-.018l4.453-5.094a.75.75 0 0 1 1.13.988h-.001Z"></path>
+          </svg>
+          <div className="text">
+            <h6>Thank You</h6>
+            <h6>Your request has been recieved</h6>
+          </div>
         </div>
-    );
-}
+        <main>
+          <img src={celebration} alt="celebration illustrator" />
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default CompletedRequest;

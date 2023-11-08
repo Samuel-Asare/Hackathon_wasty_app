@@ -52,8 +52,7 @@
 }
 @media (min-width: 770px) and (max-width: 991.98px) {
   .container_wrapper .inner_wrapper .text_btn .btn {
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
   }
 }
 .container_wrapper .inner_wrapper .text_btn .btn a {
@@ -99,4 +98,4 @@
 .container_wrapper .inner_wrapper .text_btn .btn a .create_account:hover, .container_wrapper .inner_wrapper .text_btn .btn a .create_account:focus {
   background-color: #d9d9d9;
   color: #000000;
-}/*# sourceMappingURL=HeroSection.css.map */
+}
