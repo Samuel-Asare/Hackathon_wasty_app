@@ -7,6 +7,9 @@
   height: 100vh;
   .inner_wrapper {
     width: 40%;
+    @include mobile_screen {
+      width: 95%;
+    }
     .header {
       width: 100%;
       text-align: center;

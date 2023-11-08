@@ -1,5 +1,3 @@
-
-
 import { Link } from "react-router-dom";
 import "../../css/Review_Page.css";
 import { useFormData } from "../../Context/RequestContext";
@@ -7,33 +5,35 @@ import axios from "axios";
 
 const MainReviewPage = () => {
   const { formData } = useFormData();
-  const handleSendRequest = async() => {
-    
+
+  const handleSendRequest = async () => {
     const requestData = {
       username: formData.username,
       location: formData.location,
       landmark: formData.landmark,
-      telephone:formData.telephone,
+      telephone: formData.telephone,
       date: formData.date,
       wasteType: formData.wasteType,
       numberOfBins: formData.numberOfBins,
       serviceOption: formData.serviceOption,
-    }
+    };
 
     try {
-      await axios.post("https://hackathon-waste-api.onrender.com/api/v1/waste-request/add",requestData,{
-      headers:{
-      token:"Bearer "+ JSON.parse(localStorage.getItem("user")).accessToken
-      }
-})
+      await axios.post(
+        "https://hackathon-waste-api.onrender.com/api/v1/waste-request/add",
+        requestData,
+        {
+          headers: {
+            token:
+              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+          },
+        }
+      );
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
+  };
 
-
-
-  }
-  
   return (
     <div className="review_wrapper">
       <div className="inner_wrapper">
@@ -76,9 +76,12 @@ const MainReviewPage = () => {
 
           <div className="btn_request">
             <button className="back_btn btn">Back</button>
-            
-              <button className="reg_btn btn" onClick={handleSendRequest}>Request Service</button>
-            
+
+            <Link to="/completed">
+              <button className="reg_btn btn" onClick={handleSendRequest}>
+                Request Service
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -7,6 +7,11 @@
 .review_wrapper .inner_wrapper {
   width: 40%;
 }
+@media (max-width: 770px) {
+  .review_wrapper .inner_wrapper {
+    width: 95%;
+  }
+}
 .review_wrapper .inner_wrapper .header {
   width: 100%;
   text-align: center;

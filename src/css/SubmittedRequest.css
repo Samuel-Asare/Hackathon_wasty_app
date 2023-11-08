@@ -7,6 +7,11 @@
 .submitted_wrapper .inner_wrapper {
   width: 30%;
 }
+@media (max-width: 770px) {
+  .submitted_wrapper .inner_wrapper {
+    width: 95%;
+  }
+}
 .submitted_wrapper .inner_wrapper .header {
   width: 100%;
   text-align: center;

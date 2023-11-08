@@ -9,6 +9,11 @@
 .request_wrapper .inner_wrapper {
   width: 40%;
 }
+@media (max-width: 770px) {
+  .request_wrapper .inner_wrapper {
+    width: 95%;
+  }
+}
 .request_wrapper .inner_wrapper .header {
   text-align: center;
   display: grid;

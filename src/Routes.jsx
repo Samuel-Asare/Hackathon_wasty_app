@@ -18,7 +18,7 @@ const MyRoutes = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/request" element={<RequestPage />} />
         <Route path="/review" element={<MainReviewPage />} />
-        <Route path="/colpleted" element={<CompletedRequest />} />
+        <Route path="/completed" element={<CompletedRequest />} />
         <Route path="api/auth/:id/verify/:token" element={<Email />} />
         <Route path="/submittedrequests" element={<SubmittedRequests />} />
         <Route path="*" element={<NotFound />} />

@@ -4,9 +4,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh !important;
+  min-height: 100vh !important;
   padding-top: 2.5rem !important;
+
+  @include mobile_screen {
+    flex-direction: column;
+    padding-top: 5rem !important;
+  }
+
   .inputs_feild_container {
+    @include mobile_screen {
+      order: 2;
+      width: 95%;
+      margin-top: 1rem !important;
+    }
+
     background-color: rgba(51, 105, 153, 0.046);
     flex: 1;
     height: 100%;
@@ -23,6 +35,9 @@
       margin-top: 1rem !important;
     }
     .inputs_content {
+      @include mobile_screen {
+        width: 100%;
+      }
       padding: 0.7rem 0 !important;
       width: 70%;
       display: flex;
