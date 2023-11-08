@@ -3,6 +3,7 @@
   background-color: #14621c;
   color: #fff;
   width: 100vw;
+  padding-top: 1.2rem !important;
 }
 .carousel_wrapper .header {
   width: 100%;
@@ -11,7 +12,7 @@
   margin-bottom: 1rem !important;
 }
 .carousel_wrapper .header h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .carousel_wrapper .header h2::after {
@@ -54,4 +55,4 @@
 }
 .carousel_wrapper .carousel .text .by {
   margin-top: 1rem !important;
-}
+}/*# sourceMappingURL=Carousel_Testimonies.css.map */

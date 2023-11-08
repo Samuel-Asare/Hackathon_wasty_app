@@ -1,31 +1,37 @@
 import { createContext, useEffect, useReducer } from "react";
 import authReducer from "./AuthReducer";
+import PropTypes from "prop-types";
 
 const INITIAL_STATE = {
-  user: JSON.parse(localStorage.getItem("user")) || null,
-  isFetching: false,
-  error: false,
+    user: JSON.parse(localStorage.getItem("user")) || null,
+    isFetching: false,
+    error: false,
 };
 
 export const AuthContext = createContext(INITIAL_STATE);
 
 export const AuthContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
+    const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
 
-  useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(state.user));
-  }, [state.user]);
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(state.user));
+    }, [state.user]);
 
-  return (
-    <AuthContext.Provider
-      value={{
-        user: state.user,
-        isFetching: state.isFetching,
-        error: state.error,
-        dispatch,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider
+            value={{
+                user: state.user,
+                isFetching: state.isFetching,
+                error: state.error,
+                dispatch,
+            }}
+        >
+            {children}
+        </AuthContext.Provider>
+    );
+};
+
+AuthContextProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+    otherProp: PropTypes.string.isRequired, // Add other props as needed
 };

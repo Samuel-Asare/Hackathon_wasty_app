@@ -1,44 +1,65 @@
-// FormDataContext.js
+// UserInputContext.js
+
 import { createContext, useContext, useReducer } from "react";
+import PropTypes from "prop-types";
 
-const FormDataContext = createContext();
-
+// Define the initial state
 const initialState = {
-  username: "",
-  location: "",
-  landmark: "",
-  date: "",
-  telephone: "",
-  wasteType: "",
-  numberOfBins: "",
-  serviceOption: "",
+    username: "",
+    location: "",
+    landmark: "",
+    dateTime: "",
+    telephone: "",
+    wasteType: "",
+    numberOfBins: "",
+    serviceOption: "",
 };
 
-const formReducer = (state, action) => {
-  switch (action.type) {
-    case "UPDATE_FORM_DATA":
-      return { ...state, ...action.payload };
-    default:
-      return state;
-  }
+const UserInputContext = createContext();
+
+const userInputReducer = (state, action) => {
+    switch (action.type) {
+        case "USERNAME":
+            return { ...state, username: action.payload };
+        case "LOCATION":
+            return { ...state, location: action.payload };
+        case "LANDMARK":
+            return { ...state, landmark: action.payload };
+        case "DATE_TIME":
+            return { ...state, dateTime: action.payload };
+        case "PHONE":
+            return { ...state, telephone: action.payload };
+        case "WASTE_TYPE":
+            return { ...state, wasteType: action.payload };
+        case "NUMBER_OF_BINS":
+            return { ...state, numberOfBins: action.payload };
+        case "SERVICE_OPTION":
+            return { ...state, serviceOption: action.payload };
+        case "RESET":
+            return { ...initialState };
+        default:
+            return state;
+    }
 };
 
-const FormDataProvider = ({ children }) => {
-  const [formData, dispatch] = useReducer(formReducer, initialState);
-
-  return (
-    <FormDataContext.Provider value={{ formData, dispatch }}>
-      {children}
-    </FormDataContext.Provider>
-  );
+// eslint-disable-next-line react-refresh/only-export-components
+export const useUserInput = () => {
+    return useContext(UserInputContext);
 };
 
-const useFormData = () => {
-  const context = useContext(FormDataContext);
-  if (context === undefined) {
-    throw new Error("useFormData must be used within a FormDataProvider");
-  }
-  return context;
+export const UserInputProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(userInputReducer, initialState);
+
+    console.log(state);
+
+    return (
+        <UserInputContext.Provider value={{ state, dispatch }}>
+            {children}
+        </UserInputContext.Provider>
+    );
 };
 
-export { FormDataProvider, useFormData };
+// PROP VALIDATION FOR THE CHILDREN.................
+UserInputProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};

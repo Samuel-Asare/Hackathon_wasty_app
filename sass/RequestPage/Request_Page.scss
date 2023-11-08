@@ -1,84 +1,106 @@
 @import "../utilities";
 
 .request_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column;
-  padding-top: 3rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 3rem !important;
+    background-image: url("../../src/assets/Request_Images/RequestPageBgImage.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #00000080;
+    background-blend-mode: multiply;
 
-  .inner_wrapper {
-    width: 40%;
-    @include mobile_screen {
-      width: 95%;
-    }
-
-    .header {
-      text-align: center;
-      display: grid;
-      place-content: center;
-      h4 {
-        font-weight: bold;
-        font-size: 1.8rem;
-        &::after {
-          content: "";
-          display: block;
-          height: 1px;
-          width: 100%;
-          background-color: #000;
-        }
-      }
-    }
-
-    .input_field {
-      .input {
-        width: 80%;
-        display: flex;
-        margin: 0 auto !important;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-
-        label {
-          margin-top: 0.4rem !important;
-          font-weight: bold;
-          font-size: 0.85rem;
+    .inner_wrapper {
+        width: 40%;
+        @include mobile_screen {
+            width: 95%;
         }
 
-        input {
-          width: 100%;
-          border: 1.5px solid #000000b3;
-          outline: none;
-          border-radius: 0.2rem;
-          padding: 0.2rem 0.5rem !important;
-          font-size: 0.9rem;
-          &::placeholder {
-            font-size: 0.85rem;
-          }
-        }
-      }
-
-      .btn_next {
-        width: 80%;
-        margin: 0 auto !important;
-        display: flex;
-        justify-content: flex-end;
-        a {
-          .next_btn {
-            outline: none;
-            background-color: $primary_color;
-            padding: 0.2rem 1rem !important;
-            border: none;
-            width: 100%;
-            border-radius: 0.2rem;
-            transition: ease-in-out 600ms background-color;
-            &:hover {
-              background-color: darken($color: $primary_color, $amount: 40);
+        .header {
+            text-align: center;
+            display: grid;
+            place-content: center;
+            h4 {
+                font-weight: bold;
+                font-size: 1.8rem;
+                color: #fff;
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                    background-color: #ffffff;
+                }
             }
-          }
         }
-      }
+
+        .input_field {
+            .input {
+                width: 80%;
+                display: flex;
+                margin: 0 auto !important;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+
+                label {
+                    margin-top: 0.4rem !important;
+                    font-weight: bold;
+                    font-size: 0.85rem;
+                    color: #fff;
+                }
+
+                input {
+                    width: 100%;
+                    border: 1.5px solid #000000b3;
+                    outline: none;
+                    border-radius: 0.2rem;
+                    padding: 0.2rem 0.5rem !important;
+                    font-size: 0.9rem;
+                    background-color: rgba(255, 255, 255, 0.724);
+                    &::placeholder {
+                        font-size: 0.85rem;
+                        color: rgb(0, 0, 0);
+                    }
+                }
+
+                select {
+                    width: 100%;
+                    border: 1.5px solid #000000b3;
+                    outline: none;
+                    border-radius: 0.2rem;
+                    padding: 0.2rem 0.5rem !important;
+                    font-size: 0.9rem;
+                    background-color: rgba(255, 255, 255, 0.724);
+                }
+            }
+
+            .btn_next {
+                width: 80%;
+                margin: 1rem auto 0 !important;
+                display: flex;
+                justify-content: flex-end;
+                a {
+                    .next_btn {
+                        outline: none;
+                        background-color: $primary_color;
+                        padding: 0.2rem 1rem !important;
+                        border: none;
+                        width: 100%;
+                        border-radius: 0.2rem;
+                        transition: ease-in-out 600ms background-color;
+                        &:hover {
+                            background-color: darken(
+                                $color: $primary_color,
+                                $amount: 40
+                            );
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }

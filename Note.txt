@@ -1,5 +1,22 @@
 
 
+    NOTE:
+
+    #logout functionality
+    #getting data to backend or dashboard and recent requests
+    # working on the dashboard to get the data and also render it well
+    #do final touches
+
+
+
+
+
+
+
+
+
+
+
 DEFAULT INSTALLATION
 
 npm install @mui/material @emotion/react @emotion/styled
@@ -20,3 +37,4 @@ npm install @mui/x-data-grid
 ICONS
 
 https://iconer.app/ionicons/
+

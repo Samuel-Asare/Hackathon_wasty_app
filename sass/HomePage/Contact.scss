@@ -1,50 +1,56 @@
 @import "../utilities";
 
 .contact_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem !important;
-  width: 100vw;
-  background-color: $primary_color;
-  border-bottom: 1px solid lighten($color: #00000037, $amount: 40);
-  .inner_wrapper {
-    width: 50%;
-    text-align: center;
-    display: grid;
-    place-content: center;
-    .header {
-      padding: 2rem 0 !important;
-      h4 {
-        font-weight: bold;
-        font-size: 2.6rem;
-        letter-spacing: 0.5px;
-      }
-    }
-    .input_field {
-      width: 100%;
-      .input {
-        display: flex;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 0.3rem;
-        width: 500px;
-        padding: 0.3rem 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem !important;
+    width: 100vw;
+    background-color: $primary_color;
+    border-bottom: 1px solid lighten($color: #00000037, $amount: 40);
+    .inner_wrapper {
+        width: 50%;
+        text-align: center;
+        display: grid;
+        place-content: center;
+        .header {
+            padding: 2rem 0 !important;
+            h4 {
+                font-weight: bold;
+                font-size: 2.6rem;
+                letter-spacing: 0.5px;
+            }
+        }
+        .input_field {
+            width: 100%;
 
-        input {
-          width: 100%;
-          padding: 0.2rem 0.5rem !important;
-          font-size: 0.9rem;
-          outline: none;
-          border: none;
-          &::placeholder {
-            font-size: 0.85rem;
-          }
+            .input {
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 0.3rem;
+                width: 500px;
+                margin: 0;
+                padding: 0.3rem 1rem !important;
+                @include mobile_screen {
+                    width: 400px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 0.2rem 0.5rem !important;
+                    font-size: 0.9rem;
+                    outline: none;
+                    border: none;
+                    &::placeholder {
+                        font-size: 0.85rem;
+                    }
+                }
+                .plane_svg {
+                    cursor: pointer;
+                    transform: rotate(30deg);
+                }
+            }
         }
-        .plane_svg {
-          cursor: pointer;
-        }
-      }
     }
-  }
 }

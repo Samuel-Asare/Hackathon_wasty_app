@@ -30,7 +30,13 @@
   background-color: #fff;
   border-radius: 0.3rem;
   width: 500px;
+  margin: 0;
   padding: 0.3rem 1rem !important;
+}
+@media (max-width: 770px) {
+  .contact_wrapper .inner_wrapper .input_field .input {
+    width: 400px;
+  }
 }
 .contact_wrapper .inner_wrapper .input_field .input input {
   width: 100%;
@@ -39,9 +45,13 @@
   outline: none;
   border: none;
 }
+.contact_wrapper .inner_wrapper .input_field .input input::-moz-placeholder {
+  font-size: 0.85rem;
+}
 .contact_wrapper .inner_wrapper .input_field .input input::placeholder {
   font-size: 0.85rem;
 }
 .contact_wrapper .inner_wrapper .input_field .input .plane_svg {
   cursor: pointer;
-}
+  transform: rotate(30deg);
+}/*# sourceMappingURL=Contact.css.map */

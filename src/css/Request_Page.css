@@ -5,6 +5,11 @@
   height: 100vh;
   flex-direction: column;
   padding-top: 3rem !important;
+  background-image: url("../../src/assets/Request_Images/RequestPageBgImage.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  background-blend-mode: multiply;
 }
 .request_wrapper .inner_wrapper {
   width: 40%;
@@ -22,13 +27,14 @@
 .request_wrapper .inner_wrapper .header h4 {
   font-weight: bold;
   font-size: 1.8rem;
+  color: #fff;
 }
 .request_wrapper .inner_wrapper .header h4::after {
   content: "";
   display: block;
   height: 1px;
   width: 100%;
-  background-color: #000;
+  background-color: #ffffff;
 }
 .request_wrapper .inner_wrapper .input_field .input {
   width: 80%;
@@ -42,6 +48,7 @@
   margin-top: 0.4rem !important;
   font-weight: bold;
   font-size: 0.85rem;
+  color: #fff;
 }
 .request_wrapper .inner_wrapper .input_field .input input {
   width: 100%;
@@ -50,13 +57,28 @@
   border-radius: 0.2rem;
   padding: 0.2rem 0.5rem !important;
   font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.724);
+}
+.request_wrapper .inner_wrapper .input_field .input input::-moz-placeholder {
+  font-size: 0.85rem;
+  color: rgb(0, 0, 0);
 }
 .request_wrapper .inner_wrapper .input_field .input input::placeholder {
   font-size: 0.85rem;
+  color: rgb(0, 0, 0);
+}
+.request_wrapper .inner_wrapper .input_field .input select {
+  width: 100%;
+  border: 1.5px solid rgba(0, 0, 0, 0.7019607843);
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem !important;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.724);
 }
 .request_wrapper .inner_wrapper .input_field .btn_next {
   width: 80%;
-  margin: 0 auto !important;
+  margin: 1rem auto 0 !important;
   display: flex;
   justify-content: flex-end;
 }
@@ -71,4 +93,4 @@
 }
 .request_wrapper .inner_wrapper .input_field .btn_next a .next_btn:hover {
   background-color: #1c8d27;
-}
+}/*# sourceMappingURL=Request_Page.css.map */
