@@ -1,28 +1,16 @@
 import { Link } from "react-router-dom";
 import "../../css/Request_Page.css";
 import { useState } from "react";
+import { useFormData } from "../../Context/RequestContext";
 
 
 const RequestPage = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    location: '',
-    landmark: '',
-    date: '',
-    telephone: '',
-    wasteType: '',
-    numberOfBins: '',
-    serviceOption: '',
-  });
+  const { formData, dispatch } = useFormData();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    dispatch({ type: "UPDATE_FORM_DATA", payload: { [name]: value } });
   };
- 
 
  
 
