@@ -1,0 +1,22 @@
+
+
+DEFAULT INSTALLATION
+
+npm install @mui/material @emotion/react @emotion/styled
+
+WITH STYLED
+
+npm install @mui/material @mui/styled-engine-sc styled-components
+
+
+DATETIME PICKER
+
+npm install @mui/x-date-pickers
+
+GRID
+npm install @mui/x-data-grid
+
+
+ICONS
+
+https://iconer.app/ionicons/

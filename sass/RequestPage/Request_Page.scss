@@ -1,8 +1,36 @@
 @import "../utilities";
 
 .request_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+
+    .input {
+        width: 80%;
+        display: flex;
+        margin: 0 auto !important;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        label {
+            margin-top: 0.4rem !important;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        input {
+            width: 100%;
+            border: 1.5px solid #000000b3;
+            outline: none;
+            border-radius: 0.2rem;
+            padding: 0.2rem 0.5rem !important;
+            font-size: 0.9rem;
+            &::placeholder {
+                font-size: 0.85rem;
+            }
+        }
+    }
 }
