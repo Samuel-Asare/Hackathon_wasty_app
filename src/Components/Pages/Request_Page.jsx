@@ -1,7 +1,30 @@
 import { Link } from "react-router-dom";
 import "../../css/Request_Page.css";
+import { useState } from "react";
+import axios from "axios"
 
 const RequestPage = () => {
+  const [formData, setFormData] = useState({
+    username: '',
+    location: '',
+    landmark: '',
+    date: '',
+    telephone: '',
+    wasteType: '',
+    numberOfBins: '',
+    serviceOption: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  console.log(formData)
+
+
   return (
     <div className="request_wrapper">
       <div className="inner_wrapper">
@@ -9,16 +32,17 @@ const RequestPage = () => {
           <h4>Information</h4>
         </div>
 
-        <form className="input_field">
+        <form className="input_field" onChange={handleInputChange}>
           {/* name */}
           <div className="input">
             <label htmlFor="name">Full Name:</label>
             <input
               type="text"
-              name="name"
+              name="username"
               id="name"
               placeholder="Enter Your Name"
               required
+              value={formData.username}
             />
           </div>
           {/* location */}
@@ -30,6 +54,8 @@ const RequestPage = () => {
               id="location"
               placeholder="Enter Your Location"
               required
+              value={formData.location}
+          onChange={handleInputChange}
             />
           </div>
           {/* landmark */}
@@ -41,12 +67,15 @@ const RequestPage = () => {
               id="landmark"
               placeholder="Enter Your Landmark"
               required
+              value={formData.landmark}
+          onChange={handleInputChange}
             />
           </div>
           {/* date */}
           <div className="input">
             <label htmlFor="datetime">Date and Time:</label>
-            <input type="datetime-local" name="datetime" id="datetime" />
+            <input type="datetime-local" name="date" id="datetime"value={formData.date}
+          onChange={handleInputChange} />
           </div>
           {/* telephone */}
           <div className="input">
@@ -56,12 +85,15 @@ const RequestPage = () => {
               name="telephone"
               id="telephone"
               placeholder="Enter Your Tel Number (Numbers Only)"
+              value={formData.telephone}
+          onChange={handleInputChange}
             />
           </div>
           {/* waste types */}
           <div className="input">
             <label htmlFor="wasteType">Select Waste Types:</label>
-            <select name="wasteType" id="wasteType" required>
+            <select name="wasteType" id="wasteType" required value={formData.wasteType}
+          onChange={handleInputChange}>
               <option value="" selected disabled="true">
                 Select
               </option>
@@ -78,7 +110,8 @@ const RequestPage = () => {
           {/* number of bins */}
           <div className="input">
             <label htmlFor="numOfBin">Number Of Bins:</label>
-            <select name="numOfBin" id="numOfBin" required>
+            <select name="numberOfBins" id="numOfBin" required value={formData.numberOfBins}
+          onChange={handleInputChange}>
               <option value="" selected disabled="true">
                 Select
               </option>
@@ -92,7 +125,8 @@ const RequestPage = () => {
           {/* service option */}
           <div className="input">
             <label htmlFor="seviceOption">Service Option:</label>
-            <select name="seviceOption" id="seviceOption" required>
+            <select name="serviceOption" id="seviceOption" required value={formData.serviceOption}
+          onChange={handleInputChange}>
               <option value="" selected disabled="true">
                 Select
               </option>
