@@ -45,6 +45,13 @@ const HeaderNav = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
+                to="/blogpage"
+              >
+                Blog
+              </Link>
+              <Link
+                className="nav-link active"
+                aria-current="page"
                 to="/submittedrequests"
               >
                 Your Requests

@@ -1,0 +1,20 @@
+.blogHeaderSection {
+  width: 100%;
+  position: relative;
+}
+.blogHeaderSection .carousel {
+  height: 65vh !important;
+  width: 100% !important;
+}
+.blogHeaderSection .carousel .carousel_dash_indicators button {
+  background-color: red !important;
+}
+.blogHeaderSection .carousel .carousel-image {
+  width: 100% !important;
+  height: 65vh !important;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.421) !important;
+}
