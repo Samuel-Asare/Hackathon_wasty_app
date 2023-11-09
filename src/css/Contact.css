@@ -35,7 +35,7 @@
 }
 @media (max-width: 770px) {
   .contact_wrapper .inner_wrapper .input_field .input {
-    width: 400px;
+    width: 350px;
   }
 }
 .contact_wrapper .inner_wrapper .input_field .input input {
