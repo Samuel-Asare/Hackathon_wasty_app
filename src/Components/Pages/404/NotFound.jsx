@@ -40,7 +40,7 @@ const NotFound = (props) => {
 };
 
 NotFound.propTypes = {
-  errorMessage: PropTypes.string.isRequired, // You can change 'string' to the appropriate data type if needed
+  errorMessage: PropTypes.string, // You can change 'string' to the appropriate data type if needed
 };
 
 export default NotFound;

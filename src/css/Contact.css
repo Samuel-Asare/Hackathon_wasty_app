@@ -45,13 +45,10 @@
   outline: none;
   border: none;
 }
-.contact_wrapper .inner_wrapper .input_field .input input::-moz-placeholder {
-  font-size: 0.85rem;
-}
 .contact_wrapper .inner_wrapper .input_field .input input::placeholder {
   font-size: 0.85rem;
 }
 .contact_wrapper .inner_wrapper .input_field .input .plane_svg {
   cursor: pointer;
   transform: rotate(30deg);
-}/*# sourceMappingURL=Contact.css.map */
+}
