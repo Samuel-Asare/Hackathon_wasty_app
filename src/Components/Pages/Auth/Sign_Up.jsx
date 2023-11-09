@@ -121,7 +121,7 @@ const SignUp = () => {
           {/* login Btn */}
 
           <Link className="login_btn" to="/login">
-            Login{" "}
+            Login
           </Link>
         </div>
       </div>
