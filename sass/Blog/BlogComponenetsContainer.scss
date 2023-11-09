@@ -1,0 +1,8 @@
+@import "../utilities";
+
+.main-content-wrapper {
+    flex: 1;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: darken($color: #fff, $amount: 5);
+}

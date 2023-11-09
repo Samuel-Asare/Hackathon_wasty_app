@@ -42,7 +42,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
   width: 80%;
   margin: 0 auto !important;
   position: relative;
@@ -103,4 +104,4 @@ img {
     position: sticky;
     top: 190px !important;
   }
-}
+}/*# sourceMappingURL=Services.css.map */

@@ -10,8 +10,11 @@ import NotFound from "./Components/Pages/404/NotFound";
 import SubmittedRequests from "./Components/Pages/YourSubmittedRequests/SubmittedRequests";
 import { useContext } from "react";
 import { AuthContext } from "./Context/AuthContext/AuthContext";
+
 import ForgotPassword from "./Components/Pages/forgotPassword/forgotPassword";
 import PasswordReset from "./Components/Pages/passwordReset/PasswordReset";
+import BlogComponentsContainer from "./Components/Pages/BlogPage/BlogComponents";
+import EachBlogCard from "./Components/Pages/BlogPage/EachBlogCard/EachBlogComponent";
 
 const MyRoutes = () => {
   const { user } = useContext(AuthContext);
@@ -27,6 +30,11 @@ const MyRoutes = () => {
           path="/completed"
           element={user ? <CompletedRequest /> : <Login />}
         />
+            <Route
+                    path="/blogpage"
+                    element={user ? <BlogComponentsContainer /> : <Login />}
+                />
+                <Route path="/blog/:item" element={<EachBlogCard />} />
         <Route path="api/auth/:id/verify/:token" element={<Email />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/password-reset/:id/:token" element={<PasswordReset />} />
@@ -37,7 +45,8 @@ const MyRoutes = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
-  );
+  )
+
 };
 
 export default MyRoutes;
