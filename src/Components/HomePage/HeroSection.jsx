@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "../../css/HeroSection.css";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext/AuthContext";
 
 const HeroSection = () => {
-    let User = JSON.parse(localStorage.getItem("user"));
-
-    let CurrentUser = User.emailVerified;
+    const{user}=useContext(AuthContext)
 
     return (
         <div className="container_wrapper">
@@ -22,12 +22,12 @@ const HeroSection = () => {
 
                     <div
                         className="btn"
-                        style={{ justifyContent: CurrentUser && "center" }}
+                        style={{ justifyContent: user && "center" }}
                     >
                         <Link to="/request">
                             <button className="request_btn">Request Now</button>
                         </Link>
-                        {CurrentUser ? null : (
+                        {!user && (
                             <Link to="/signup">
                                 <button className="create_account">
                                     Create account

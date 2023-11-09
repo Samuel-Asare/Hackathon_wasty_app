@@ -1,17 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/HeaderNav.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Context/AuthContext/AuthContext";
 
 const HeaderNav = () => {
-    const [showLogout, setShowLogout] = useState(false);
+   
+    const { user, dispatch } = useContext(AuthContext);
+    const navigate=useNavigate()
 
-    const handleShowLogout = () => {
-        setShowLogout(!showLogout);
-    };
+  
+        const handleLogout = () => {
+          dispatch({ type: "LOGOUT" });
+          navigate("/")
+        };
+       
+   
 
-    let User = JSON.parse(localStorage.getItem("user"));
-
-    let CurrentUser = User.emailVerified;
+  
+  
 
     return (
         <div className="header_wrapper">
@@ -44,7 +50,7 @@ const HeaderNav = () => {
                                 Your Requests
                             </Link>
 
-                            {CurrentUser ? (
+                            {user ? (
                                 <div className="logout_div_holder">
                                     <svg
                                         width="26"
@@ -57,7 +63,7 @@ const HeaderNav = () => {
                                         viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="logout_icon"
-                                        onClick={handleShowLogout}
+                                        
                                     >
                                         <path d="M14.25 15.75v1.875a1.875 1.875 0 0 1-1.875 1.875h-7.5A1.875 1.875 0 0 1 3 17.625V6.375A1.875 1.875 0 0 1 4.875 4.5H12c1.036 0 2.25.84 2.25 1.875V8.25"></path>
                                         <path d="M17.25 15.75 21 12l-3.75-3.75"></path>
@@ -65,13 +71,13 @@ const HeaderNav = () => {
                                     </svg>
                                     <div
                                         className="logout"
-                                        style={{
-                                            display: showLogout
-                                                ? "block"
-                                                : "none",
-                                        }}
+                                        // style={{
+                                        //     display: showLogout
+                                        //         ? "block"
+                                        //         : "none",
+                                        // }}
                                     >
-                                        <button>Log-out</button>
+                                        <button onClick={handleLogout}>Log-out</button>
                                     </div>
                                 </div>
                             ) : null}
