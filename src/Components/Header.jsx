@@ -3,6 +3,7 @@ import "../css/HeaderNav.css";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext/AuthContext";
 import { useState } from "react";
+import Logo from "../assets/HeaderNav/recycle.svg";
 
 const HeaderNav = () => {
   const { user, dispatch } = useContext(AuthContext);
@@ -23,7 +24,10 @@ const HeaderNav = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid container_holder">
           <Link className="navbar-brand" to="/">
-            Wasty<span>.</span>
+            <img src={Logo} alt="Brand Logo" />
+            <h3>
+              Wasty<span>.</span>
+            </h3>
           </Link>
           <button
             className="navbar-toggler"

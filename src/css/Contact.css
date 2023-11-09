@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem !important;
+  padding: 2rem 1rem 4rem !important;
   width: 100vw;
   background-color: #8de896;
   border-bottom: 1px solid rgba(102, 102, 102, 0.2156862745);
@@ -24,31 +24,52 @@
 .contact_wrapper .inner_wrapper .input_field {
   width: 100%;
 }
-.contact_wrapper .inner_wrapper .input_field .input {
+.contact_wrapper .inner_wrapper .input_field form .input {
   display: flex;
   align-items: center;
-  background-color: #fff;
   border-radius: 0.3rem;
   width: 500px;
   margin: 0;
   padding: 0.3rem 1rem !important;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 @media (max-width: 770px) {
-  .contact_wrapper .inner_wrapper .input_field .input {
+  .contact_wrapper .inner_wrapper .input_field form .input {
     width: 350px;
   }
 }
-.contact_wrapper .inner_wrapper .input_field .input input {
+.contact_wrapper .inner_wrapper .input_field form .input input {
   width: 100%;
   padding: 0.2rem 0.5rem !important;
   font-size: 0.9rem;
   outline: none;
   border: none;
+  padding: 0.5rem 0.5rem !important;
+  border-radius: 0.3rem;
 }
-.contact_wrapper .inner_wrapper .input_field .input input::placeholder {
+.contact_wrapper .inner_wrapper .input_field form .input input::placeholder {
   font-size: 0.85rem;
 }
-.contact_wrapper .inner_wrapper .input_field .input .plane_svg {
+.contact_wrapper .inner_wrapper .input_field form .input .btn_wrapper {
+  width: 100%;
+  text-align: center;
+}
+.contact_wrapper .inner_wrapper .input_field form .input .btn_wrapper button {
+  margin-top: 1.2rem !important;
+  background-color: #1c8d27;
+  width: 30%;
+  padding: 0.2rem 1rem !important;
+  border-radius: 0.2rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  transition: ease-in-out 600ms background-color;
+}
+.contact_wrapper .inner_wrapper .input_field form .input .btn_wrapper button:hover {
+  background-color: #21a22d;
+}
+.contact_wrapper .inner_wrapper .input_field form .input .btn_wrapper button .plane_svg {
   cursor: pointer;
-  transform: rotate(30deg);
+  transform: rotate(25deg);
 }

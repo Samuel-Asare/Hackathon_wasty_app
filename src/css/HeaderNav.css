@@ -10,11 +10,20 @@
   align-items: center;
 }
 .header_wrapper .navbar .container_holder .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.15rem;
+}
+.header_wrapper .navbar .container_holder .navbar-brand img {
+  width: 20%;
+}
+.header_wrapper .navbar .container_holder .navbar-brand h3 {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
-.header_wrapper .navbar .container_holder .navbar-brand span {
+.header_wrapper .navbar .container_holder .navbar-brand h3 span {
   font-family: "Times New Roman", Times, serif;
   color: #14621c;
   font-size: 2rem;
@@ -88,6 +97,7 @@
   font-weight: bold;
   font-size: 0.85rem;
   border-radius: 0.2rem;
+  display: none;
 }
 .header_wrapper .navbar .container_holder .collapse .navbar-nav .logout_div_holder .logout button:hover {
   background-color: #f2f2f2;

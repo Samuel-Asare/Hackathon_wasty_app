@@ -4,10 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem !important;
+  padding: 2rem 1rem 4rem !important;
   width: 100vw;
   background-color: $primary_color;
   border-bottom: 1px solid lighten($color: #00000037, $amount: 40);
+
   .inner_wrapper {
     width: 50%;
     text-align: center;
@@ -24,31 +25,56 @@
     .input_field {
       width: 100%;
 
-      .input {
-        display: flex;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 0.3rem;
-        width: 500px;
-        margin: 0;
-        padding: 0.3rem 1rem !important;
-        @include mobile_screen {
-          width: 350px;
-        }
+      form {
+        .input {
+          display: flex;
+          align-items: center;
+          border-radius: 0.3rem;
+          width: 500px;
+          margin: 0;
+          padding: 0.3rem 1rem !important;
+          flex-direction: column;
+          row-gap: 1rem;
 
-        input {
-          width: 100%;
-          padding: 0.2rem 0.5rem !important;
-          font-size: 0.9rem;
-          outline: none;
-          border: none;
-          &::placeholder {
-            font-size: 0.85rem;
+          @include mobile_screen {
+            width: 350px;
           }
-        }
-        .plane_svg {
-          cursor: pointer;
-          transform: rotate(30deg);
+
+          input {
+            width: 100%;
+            padding: 0.2rem 0.5rem !important;
+            font-size: 0.9rem;
+            outline: none;
+            border: none;
+            padding: 0.5rem 0.5rem !important;
+            border-radius: 0.3rem;
+            &::placeholder {
+              font-size: 0.85rem;
+            }
+          }
+
+          .btn_wrapper {
+            width: 100%;
+            text-align: center;
+            button {
+              margin-top: 1.2rem !important;
+              background-color: darken($color: $primary_color, $amount: 40);
+              width: 30%;
+              padding: 0.2rem 1rem !important;
+              border-radius: 0.2rem;
+              outline: none;
+              border: none;
+              color: #fff;
+              transition: ease-in-out 600ms background-color;
+              &:hover {
+                background-color: darken($color: $primary_color, $amount: 35);
+              }
+              .plane_svg {
+                cursor: pointer;
+                transform: rotate(25deg);
+              }
+            }
+          }
         }
       }
     }
