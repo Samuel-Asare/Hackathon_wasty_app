@@ -14,7 +14,7 @@ const PasswordReset = () => {
     const verifyUrl = async () => {
       try {
         await axios.get(
-          ` https://file-server-api.onrender.com/api/auth/password-reset/${param.id}/${param.token}`
+          ` https://hackathon-waste-api.onrender.com/api/v1/auth/password-reset/${param.id}/${param.token}`
         );
         setValidUrl(true);
       } catch (error) {
@@ -28,7 +28,7 @@ const PasswordReset = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        ` https://hackathon-waste-api.onrender.com/api/v1/auth/password-reset/${param.id}/${param.token}`,
+        `  https://hackathon-waste-api.onrender.com/api/v1/auth/password-reset/${param.id}/${param.token}`,
         { password }
       );
       setMsg(res.data.message);

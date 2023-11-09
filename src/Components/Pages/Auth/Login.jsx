@@ -72,10 +72,10 @@ const Login = () => {
             </button>
           </form>
           {error && <span style={{ color: "red" }}>{error}</span>}
-          {/* alternative step */}
+
           <div className="alternative_step">
             <p>Did you forget your password?</p>
-            <Link to="forgot-password">Reset Password</Link>
+            <Link to="/forgot-password">Reset Password</Link>
           </div>
 
           {/* login Btn */}

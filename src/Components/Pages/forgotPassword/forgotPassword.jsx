@@ -12,12 +12,13 @@ const ForgotPassword = () => {
 
     try {
       const res = await axios.post(
-        " https://hackathon-waste-api.onrender.com/api/auth/password-reset",
+        "https://hackathon-waste-api.onrender.com/api/v1/auth/password-reset",
         { email }
       );
       console.log(res.data);
       setMsg(res.data.message);
     } catch (error) {
+      console.log(error);
       if (
         error.response &&
         error.response.status >= 400 &&
