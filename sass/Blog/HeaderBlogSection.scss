@@ -1,26 +1,38 @@
 @import "../utilities";
 
-.blogHeaderSection {
-  width: 100%;
-  position: relative;
+.header_section_wrapper {
+    height: 65vh;
+    width: 100vw;
+    background-image: url("../../src/assets/BlogPage/OtherBlogPageImages/Blog_Header_Image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: darken($color: #ffffff, $amount: 0);
+    background-color: #00000034;
+    background-blend-mode: multiply;
 
-  .carousel {
-    height: 65vh !important;
-    width: 100% !important;
+    .text_container {
+        height: 100%;
+        width: 60%;
+        position: relative;
+        .content {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
 
-    .carousel_dash_indicators {
-      button {
-        background-color: red !important;
-      }
+            h4 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            h6 {
+                font-weight: bold;
+                margin-top: 1rem !important;
+                letter-spacing: 1px;
+            }
+        }
     }
-    .carousel-image {
-      width: 100% !important;
-      height: 65vh !important;
-      object-fit: cover;
-    }
-  }
-}
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.421) !important;
 }

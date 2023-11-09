@@ -60,6 +60,10 @@
   font-size: 0.9rem;
   background-color: rgba(255, 255, 255, 0.724);
 }
+.request_wrapper .inner_wrapper .input_field .input input::-moz-placeholder {
+  font-size: 0.85rem;
+  color: rgb(0, 0, 0);
+}
 .request_wrapper .inner_wrapper .input_field .input input::placeholder {
   font-size: 0.85rem;
   color: rgb(0, 0, 0);
@@ -90,4 +94,4 @@
 }
 .request_wrapper .inner_wrapper .input_field .btn_next a .next_btn:hover {
   background-color: #1c8d27;
-}
+}/*# sourceMappingURL=Request_Page.css.map */

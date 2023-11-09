@@ -1,20 +1,33 @@
-.blogHeaderSection {
-  width: 100%;
+.header_section_wrapper {
+  height: 65vh;
+  width: 100vw;
+  background-image: url("../../src/assets/BlogPage/OtherBlogPageImages/Blog_Header_Image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2039215686);
+  background-blend-mode: multiply;
+}
+.header_section_wrapper .text_container {
+  height: 100%;
+  width: 60%;
   position: relative;
 }
-.blogHeaderSection .carousel {
-  height: 65vh !important;
-  width: 100% !important;
+.header_section_wrapper .text_container .content {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
 }
-.blogHeaderSection .carousel .carousel_dash_indicators button {
-  background-color: red !important;
+.header_section_wrapper .text_container .content h4 {
+  font-size: 2rem;
+  font-weight: bold;
 }
-.blogHeaderSection .carousel .carousel-image {
-  width: 100% !important;
-  height: 65vh !important;
-  object-fit: cover;
-}
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.421) !important;
-}
+.header_section_wrapper .text_container .content h6 {
+  font-weight: bold;
+  margin-top: 1rem !important;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=HeaderBlogSection.css.map */
