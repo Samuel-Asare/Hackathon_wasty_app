@@ -52,9 +52,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border: none;
 
         @include mobile_screen {
-          width: 100%;
+          width: 80%;
         }
 
         @include tablet_screen {

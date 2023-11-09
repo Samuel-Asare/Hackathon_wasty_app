@@ -9,7 +9,7 @@ const Services = () => {
     <div className="services_wrapper">
       <div className="header">
         <div className="text_wrapper">
-          <h4>wasty. comes with amaing features like:</h4>
+          <h4>wasty. comes with amazing features like:</h4>
         </div>
       </div>
 

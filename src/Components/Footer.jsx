@@ -20,7 +20,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="copyright_text">
-            &copy;<p>{getYear} wasty. All right reseved</p>
+            &copy;<p>{getYear} wasty. All right reserved</p>
           </div>
         </div>
         <div className="social_links">
