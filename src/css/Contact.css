@@ -48,9 +48,6 @@
   padding: 0.5rem 0.5rem !important;
   border-radius: 0.3rem;
 }
-.contact_wrapper .inner_wrapper .input_field form .input input::-moz-placeholder {
-  font-size: 0.85rem;
-}
 .contact_wrapper .inner_wrapper .input_field form .input input::placeholder {
   font-size: 0.85rem;
 }
@@ -75,4 +72,4 @@
 .contact_wrapper .inner_wrapper .input_field form .input .btn_wrapper button .plane_svg {
   cursor: pointer;
   transform: rotate(25deg);
-}/*# sourceMappingURL=Contact.css.map */
+}

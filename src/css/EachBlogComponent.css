@@ -8,8 +8,7 @@
 .eachcardwrapper header img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .eachcardwrapper header .content {
   position: absolute;
@@ -69,8 +68,7 @@
   border-radius: 0.7rem;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .eachcardwrapper .storyContent .imageAndText .imageDiv figcaption cite {
   float: right;
@@ -89,4 +87,4 @@
 }
 .eachcardwrapper .storyContent .bottomsectionText {
   padding: 0 1rem 1rem !important;
-}/*# sourceMappingURL=EachBlogComponent.css.map */
+}

@@ -57,8 +57,7 @@
   bottom: 0;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.5411764706);
-  -webkit-backdrop-filter: 12px;
-          backdrop-filter: 12px;
+  backdrop-filter: 12px;
   padding: 0.3rem;
 }
 .localCardsWrapper .localCardsContent .blog-card a .image_div .content h6 {
@@ -103,4 +102,4 @@ a {
 }
 a:hover, a:focus, a:focus-visible {
   color: rgba(0, 0, 0, 0.7960784314) !important;
-}/*# sourceMappingURL=BlogCards.css.map */
+}
