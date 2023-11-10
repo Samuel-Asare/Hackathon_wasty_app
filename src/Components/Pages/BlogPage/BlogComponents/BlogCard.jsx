@@ -22,7 +22,7 @@ const BlogCard = () => {
           <div className="blog-card" key={item.key}>
             <Link to={`/blog/${item.key}`}>
               <div className="image_div">
-                <img src={item.image} alt="blog image" />
+                <img src={`${item.image}`} alt="blog image" />
 
                 <div className="content">
                   <h6 className="title">{item.title}</h6>
