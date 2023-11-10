@@ -61,7 +61,7 @@ const MainReviewPage = () => {
           </div>
           <div className="data">
             <h6>Date and Time:</h6>
-            <p>{state.dateTime}</p>
+            <p>{state.datee}</p>
           </div>
           <div className="data">
             <h6>Telephone:</h6>
